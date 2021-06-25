@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="./index.css">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>Document</title>
 </head>
 
@@ -31,21 +31,51 @@
                             <div class="row">
                                 <div class="col s4 weight weight-tl">
                                     <div class="info">
-                                        20 KG
+                                        <div class="value">
+                                            <div class="value-number">
+                                                20
+                                            </div>
+                                            <div class="value-type">
+                                                KG
+                                            </div>
+                                            <div class="value-indicator">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col s4"></div>
                                 <div class="col s4 weight weight-tr">
                                     <div class="info">
-                                        20 KG
+                                        <div class="value">
+                                            <div class="value-number">
+                                                20
+                                            </div>
+                                            <div class="value-type">
+                                                KG
+                                            </div>
+                                            <div class="value-indicator">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col s4"></div>
-                                <div class="col s4 weight weight-ct">
+                                <div class="col s4 hide weight weight-ct">
                                     <div class="info">
-                                        20 KG
+                                        <div class="value">
+                                            <div class="value-number">
+                                                20
+                                            </div>
+                                            <div class="value-type">
+                                                KG
+                                            </div>
+                                            <div class="value-indicator">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col s4"></div>
@@ -53,13 +83,33 @@
                             <div class="row">
                                 <div class="col s4 weight weight-bl">
                                     <div class="info">
-                                        20 KG
+                                        <div class="value">
+                                            <div class="value-number">
+                                                20
+                                            </div>
+                                            <div class="value-type">
+                                                KG
+                                            </div>
+                                            <div class="value-indicator">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col s4"></div>
                                 <div class="col s4 weight weight-br">
-                                    <div class="info">
-                                        20 KG
+                                    <div class="info" onclick="animateBar(this)">
+                                        <div class="value">
+                                            <div class="value-number">
+                                                20
+                                            </div>
+                                            <div class="value-type">
+                                                KG
+                                            </div>
+                                            <div class="value-indicator">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -69,6 +119,19 @@
                     <div class="row bottom">Traseira</div>
                 </div>
             </div>
+            <div class="content-controls">
+                <div class="row">
+                    <div class="col s4">
+                        <button class="recal" onclick="clearValues()"><i class="fas fa-redo"></i> <legend >Zerar</legend></button>
+                    </div>
+                    <div class="col s4">
+                        <button class="record"><i class="fas fa-save"></i> <legend>Gravar</legend></button>
+                    </div>
+                    <div class="col s4">
+                        <button class="freeze"><i class="far fa-pause-circle"></i> <legend>Congelar</legend></button>
+                    </div>
+                </div>
+            </div>
             <div class="content-legend">
                 <h6>Distribuição de carga</h6>
             </div>
@@ -76,23 +139,22 @@
         <div class="footer">
             <div class="bar">
                 <div class="row">
-                    <div class="col s2">
-                        <div class="menu-item menu-item-1">A</div>
-                    </div>
-                    <div class="col s2">
-                        <div class="menu-item menu-item-2">A</div>
+                    <div class="col s4">
+                        <div class="menu-item menu-item-1"><i class="far fa-edit"></i> </div>
                     </div>
                     <div class="col s4">
-                        <div class="menu-item menu-item-3">A</div>
+                        <div class="menu-item menu-item-2"><i class="fas fa-bars"></i></div>
                     </div>
-                    <div class="col s2">
-                        <div class="menu-item menu-item-4">A</div>
-                    </div>
-                    <div class="col s2">
-                        <div class="menu-item menu-item-5">A</div>
+                    <div class="col s4">
+                        <div class="menu-item menu-item-3"><i class="fas fa-history"></i></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="test-box">
+            <label for="text"></label>
+            <input type="text" name="test" id="test" class="test">
+            <button class="test-button" onclick="runTest()">Enviar</button>
         </div>
     </div>
 </body>
